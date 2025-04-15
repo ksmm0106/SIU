@@ -41,6 +41,7 @@
     .content {
       padding: 40px;
       background-color: rgba(0, 0, 0, 0.5);
+      display: none;
     }
     .section {
       margin-bottom: 40px;
@@ -67,6 +68,10 @@
       background-color: #444;
       color: #fff;
     }
+    .language-switch button.active {
+      background-color: #00aaff;
+      font-weight: bold;
+    }
     .insta-icon {
       position: absolute;
       bottom: 20px;
@@ -75,10 +80,6 @@
     }
     .insta-icon a {
       color: #fff;
-    }
-    .language-switch button.active {
-      background-color: #00aaff;
-      font-weight: bold;
     }
   </style>
 </head>
@@ -89,19 +90,21 @@
   </header>
 
   <nav>
-    <a href="#about">회사 소개</a>
-    <a href="#products">제품 아카이빙</a>
-    <a href="#clients">주요 거래처</a>
-    <a href="#contact">연락처</a>
+    <a href="javascript:void(0)" onclick="showSection('about')">회사 소개</a>
+    <a href="javascript:void(0)" onclick="showSection('products')">제품 아카이빙</a>
+    <a href="javascript:void(0)" onclick="showSection('clients')">주요 거래처</a>
+    <a href="javascript:void(0)" onclick="showSection('contact')">연락처</a>
   </nav>
 
-  <div class="content">
-    <div id="about" class="section">
+  <div id="about" class="content">
+    <div class="section">
       <h2>회사 소개</h2>
       <p>SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.</p>
     </div>
+  </div>
 
-    <div id="products" class="section">
+  <div id="products" class="content">
+    <div class="section">
       <h2>제품 아카이빙</h2>
       <ul>
         <li>과실초(석류, 샤인머스켓, 레몬, 복숭아, 매실)</li>
@@ -113,8 +116,10 @@
         <li>과일즙 스틱</li>
       </ul>
     </div>
+  </div>
 
-    <div id="clients" class="section">
+  <div id="clients" class="content">
+    <div class="section">
       <h2>주요 거래처</h2>
       <ul>
         <li>올리브영</li>
@@ -126,8 +131,10 @@
         <li>기타 아시아 및 유럽 지역 유통 파트너</li>
       </ul>
     </div>
+  </div>
 
-    <div id="contact" class="section">
+  <div id="contact" class="content">
+    <div class="section">
       <h2>연락처</h2>
       <p>
         법인명: (주) SIU － 대표자: 윤인자 － 대표자 연락처: 010-5660-3237<br>
@@ -151,6 +158,22 @@
   </footer>
 
   <script>
+    // 초기화: 기본적으로 모든 콘텐츠는 숨겨짐
+    function showSection(sectionId) {
+      // 모든 섹션을 숨김
+      const sections = document.querySelectorAll('.content');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // 클릭한 섹션만 보여줌
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.style.display = 'block';
+      }
+    }
+
+    // 다국어 콘텐츠
     const content = {
       ko: {
         about: "SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.",
@@ -172,6 +195,7 @@
       }
     };
 
+    // 언어 전환 함수
     function switchLanguage(language) {
       document.getElementById('about').innerHTML = content[language].about;
       document.getElementById('products').innerHTML = content[language].products;
