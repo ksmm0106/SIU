@@ -45,6 +45,9 @@
     .section {
       margin-bottom: 40px;
     }
+    .section h2 {
+      margin-top: 0;
+    }
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
@@ -73,6 +76,10 @@
     .insta-icon a {
       color: #fff;
     }
+    .language-switch button.active {
+      background-color: #00aaff;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -82,10 +89,10 @@
   </header>
 
   <nav>
-    <a href="#about">회사 소개</a>
-    <a href="#products">제품 아카이빙</a>
-    <a href="#clients">주요 거래처</a>
-    <a href="#contact">연락처</a>
+    <a href="#about" id="menu-about">회사 소개</a>
+    <a href="#products" id="menu-products">제품 아카이빙</a>
+    <a href="#clients" id="menu-clients">주요 거래처</a>
+    <a href="#contact" id="menu-contact">연락처</a>
   </nav>
 
   <div class="content">
@@ -96,30 +103,46 @@
 
     <div id="products" class="section">
       <h2>제품 아카이빙</h2>
-      <p>지금까지 SIU가 다뤄온 주요 품목들을 이곳에서 확인하실 수 있습니다. (세부 리스트는 추후 업데이트 예정)</p>
+      <ul>
+        <li>과실초(석류, 샤인머스켓, 레몬, 복숭아, 매실)</li>
+        <li>솜사탕 & 마카롱</li>
+        <li>대파갈비 스낵</li>
+        <li>기능성 화장품 (PRDN 성분 포함)</li>
+        <li>기타 OEM 식품 및 화장품</li>
+        <li>베트남 즉석 쌀국수</li>
+        <li>과일즙 스틱</li>
+      </ul>
     </div>
 
     <div id="clients" class="section">
       <h2>주요 거래처</h2>
-      <p>국내외 다양한 파트너들과의 협력을 통해 신뢰와 성장을 이어가고 있습니다. (리스트 업데이트 예정)</p>
+      <ul>
+        <li>올리브영</li>
+        <li>코스트코</li>
+        <li>무인양품</li>
+        <li>라쿠텐</li>
+        <li>도큐핸즈</li>
+        <li>아마존 재팬</li>
+        <li>기타 아시아 및 유럽 지역 유통 파트너</li>
+      </ul>
     </div>
 
     <div id="contact" class="section">
-      <h2> </h2>
+      <h2>연락처</h2>
       <p>
         법인명: (주) SIU － 대표자: 윤인자 － 대표자 연락처: 010-5660-3237<br>
         주소: 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)<br>
         영문주소: 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea<br>
-        전화: 02-446-0011 － 팩스: 02-446-0018 － 이메일: yij1225@hotmail.com
+        전화: 02-446-0011 － 팩스: 02-446-0018 － 이메일: yij1225@hotmail.com<br>
       </p>
     </div>
   </div>
 
   <footer>
     <div class="language-switch">
-      <button onclick="switchLanguage('ko')">한국어</button>
-      <button onclick="switchLanguage('en')">English</button>
-      <button onclick="switchLanguage('ja')">日本語</button>
+      <button id="btn-ko" onclick="switchLanguage('ko')">한국어</button>
+      <button id="btn-en" onclick="switchLanguage('en')">English</button>
+      <button id="btn-ja" onclick="switchLanguage('ja')">日本語</button>
     </div>
     <div class="insta-icon">
       <a href="https://www.instagram.com/siu.co.ltd/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -129,27 +152,63 @@
   <script>
     const content = {
       ko: {
+        menu: {
+          about: "회사 소개",
+          products: "제품 아카이빙",
+          clients: "주요 거래처",
+          contact: "연락처"
+        },
         about: "SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.",
-        products: "지금까지 SIU가 다뤄온 주요 품목들을 이곳에서 확인하실 수 있습니다. (세부 리스트는 추후 업데이트 예정)",
-        clients: "국내외 다양한 파트너들과의 협력을 통해 신뢰와 성장을 이어가고 있습니다. (리스트 업데이트 예정)",
+        products: `<ul><li>과실초(석류, 샤인머스켓, 레몬, 복숭아, 매실)</li><li>솜사탕 & 마카롱</li><li>대파갈비 스낵</li><li>기능성 화장품 (PRDN 성분 포함)</li><li>기타 OEM 식품 및 화장품</li><li>베트남 즉석 쌀국수</li><li>과일즙 스틱</li></ul>`,
+        clients: `<ul><li>올리브영</li><li>코스트코</li><li>무인양품</li><li>라쿠텐</li><li>도큐핸즈</li><li>아마존 재팬</li><li>기타 아시아 및 유럽 지역 유통 파트너</li></ul>`,
+        contact: "연락처"
       },
       en: {
+        menu: {
+          about: "About Us",
+          products: "Product Archive",
+          clients: "Major Clients",
+          contact: "Contact"
+        },
         about: "SIU is a trading company specializing in food, pharmaceuticals, cosmetics, and daily necessities. We discover products that meet global needs and deliver sustainable value based on quality and trust.",
-        products: "You can check out the key products SIU has dealt with here. (Detailed list coming soon)",
-        clients: "We are building trust and growth with a wide range of domestic and international partners. (List to be updated)"
+        products: `<ul><li>Fruit Vinegar (Pomegranate, Shine Muscat, Lemon, Peach, Plum)</li><li>Cotton Candy & Macarons</li><li>Green Onion Galbi Snack</li><li>Functional Cosmetics (with PRDN)</li><li>Other OEM Foods & Cosmetics</li><li>Vietnamese Instant Pho</li><li>Fruit Juice Sticks</li></ul>`,
+        clients: `<ul><li>Olive Young</li><li>Costco</li><li>MUJI</li><li>Rakuten</li><li>Tokyu Hands</li><li>Amazon Japan</li><li>Other distribution partners in Asia and Europe</li></ul>`,
+        contact: "Contact"
       },
       ja: {
+        menu: {
+          about: "会社概要",
+          products: "製品アーカイブ",
+          clients: "主要取引先",
+          contact: "連絡先"
+        },
         about: "SIUは、食品、医薬品、化粧品、生活用品を専門とする貿易会社です。グローバル市場でお客様のニーズに応える製品を発掘し、高い品質と信頼を基に持続的な価値を提供しています。",
-        products: "これまでSIUが取り扱ってきた主な商品をご覧いただけます。（詳細リストは後日更新予定）",
-        clients: "国内外の多様なパートナーと協力し、信頼と成長を築いています。（リストは後日更新）"
+        products: `<ul><li>果実酢（ザクロ、シャインマスカット、レモン、桃、梅）</li><li>わたあめ＆マカロン</li><li>ねぎカルビスナック</li><li>機能性化粧品（PRDN成分含む）</li><li>その他OEM食品および化粧品</li><li>ベトナムインスタントフォー</li><li>フルーツジューススティック</li></ul>`,
+        clients: `<ul><li>オリーブヤング</li><li>コストコ</li><li>無印良品</li><li>楽天</li><li>東急ハンズ</li><li>アマゾンジャパン</li><li>アジアおよびヨーロッパの他の流通パートナー</li></ul>`,
+        contact: "連絡先"
       }
     };
 
     function switchLanguage(lang) {
-      document.querySelector('#about p').innerText = content[lang].about;
-      document.querySelector('#products p').innerText = content[lang].products;
-      document.querySelector('#clients p').innerText = content[lang].clients;
+      document.getElementById('menu-about').textContent = content[lang].menu.about;
+      document.getElementById('menu-products').textContent = content[lang].menu.products;
+      document.getElementById('menu-clients').textContent = content[lang].menu.clients;
+      document.getElementById('menu-contact').textContent = content[lang].menu.contact;
+
+      document.getElementById('about').innerHTML = content[lang].about;
+      document.getElementById('products').innerHTML = content[lang].products;
+      document.getElementById('clients').innerHTML = content[lang].clients;
+      document.getElementById('contact').innerHTML = content[lang].contact;
+
+      // Update active button style
+      document.querySelectorAll('.language-switch button').forEach(button => {
+        button.classList.remove('active');
+      });
+      document.getElementById(`btn-${lang}`).classList.add('active');
     }
+
+    // Set default language to Korean
+    switchLanguage('ko');
   </script>
 </body>
 </html>
