@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIU Trading Co., Ltd.</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+    nav button {
+      margin: 0 5px;
+      padding: 8px 16px;
+      border: none;
+      background: #1e3a8a;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    section {
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    footer {
+      background: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .lang { display: none; }
+    .active { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>SIU Trading Co., Ltd.</h1>
+  <p>SMILE IDEA FOR YOU</p>
+</header>
+
+<nav>
+  <button onclick="setLang('kr')">한국어</button>
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('jp')">日本語</button>
+</nav>
+
+<!-- 한국어 -->
+<div class="lang active" id="kr">
+  <section>
+    <h2>회사 소개</h2>
+    <p>
+      SIU는 "SMILE IDEA FOR YOU"의 의미를 담은 글로벌 종합 무역회사입니다.<br>
+      식품, 의약품, 화장품, 생활용품 등 다양한 품목을 전 세계로 수출입하며,<br>
+      고객의 니즈에 맞는 맞춤형 솔루션을 제공합니다.
+    </p>
+  </section>
+  <section>
+    <h2>주요 서비스</h2>
+    <ul>
+      <li>국제 수출입 컨설팅</li>
+      <li>물류 및 포워딩</li>
+      <li>글로벌 파트너 매칭</li>
+    </ul>
+  </section>
+  <section>
+    <h2>연락처</h2>
+    <p>
+      이메일: <a href="mailto:yij1225@hotmail.com">yij1225@hotmail.com</a><br>
+      전화: 02-446-0011<br>
+      팩스: 02-446-0018<br>
+      대표자: 윤인자, 전화: 010-5660-3237<br>
+      주소: 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)
+    </p>
+  </section>
+</div>
+
+<!-- 영어 -->
+<div class="lang" id="en">
+  <section>
+    <h2>About Us</h2>
+    <p>
+      SIU, short for "SMILE IDEA FOR YOU," is a global trading company.<br>
+      We specialize in the import and export of food, pharmaceuticals, cosmetics, and everyday goods,<br>
+      delivering customized solutions tailored to client needs.
+    </p>
+  </section>
+  <section>
+    <h2>Our Services</h2>
+    <ul>
+      <li>International Trade Consulting</li>
+      <li>Logistics & Forwarding</li>
+      <li>Global Partner Matching</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Email: <a href="mailto:yij1225@hotmail.com">yij1225@hotmail.com</a><br>
+      Phone: +82-2-446-0011<br>
+      Fax: +82-2-446-0018<br>
+      Representative: Inja Yun, Phone: +82-10-5660-3237<br>
+      Address: 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea
+    </p>
+  </section>
+</div>
+
+<!-- 일본어 -->
+<div class="lang" id="jp">
+  <section>
+    <h2>会社概要</h2>
+    <p>
+      SIU（SMILE IDEA FOR YOUの略）は、グローバル総合貿易会社です。<br>
+      食品、医薬品、化粧品、生活用品など多様な商品を取り扱い、<br>
+      顧客ニーズに応じた最適なソリューションを提供します。
+    </p>
+  </section>
+  <section>
+    <h2>主なサービス</h2>
+    <ul>
+      <li>国際貿易コンサルティング</li>
+      <li>物流およびフォワーディング</li>
+      <li>グローバルパートナーのマッチング</li>
+    </ul>
+  </section>
+  <section>
+    <h2>お問い合わせ</h2>
+    <p>
+      メール: <a href="mailto:yij1225@hotmail.com">yij1225@hotmail.com</a><br>
+      電話: +82-2-446-0011<br>
+      ファックス: +82-2-446-0018<br>
+      代表者: 윤인자, 電話: +82-10-5660-3237<br>
+      住所: 韓国ソウル特別市江南区貿易路81ギル94番地3階
+    </p>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 SIU Trading Co., Ltd. All rights reserved.
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.getElementById(lang).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
