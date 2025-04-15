@@ -1,128 +1,155 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SIU 회사 소개</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            background-image: url('https://example.com/port-image.jpg'); /* 항구 이미지 추가 */
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-        }
-        header {
-            background: rgba(0, 0, 0, 0.7); /* 반투명 배경 */
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        section {
-            background-color: rgba(255, 255, 255, 0.8); /* 흰색 배경 */
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #333;
-        }
-        .contact-info {
-            font-size: 1.1em;
-            color: #333;
-        }
-        .contact-info span {
-            display: block;
-            margin-bottom: 8px;
-        }
-        .language-select {
-            text-align: right;
-            margin: 10px;
-        }
-        .language-select button {
-            background-color: #0077b5; /* 언어 선택 버튼 색상 */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin: 0 5px;
-        }
-        .language-select button:hover {
-            background-color: #005c8b;
-        }
-        .social-media {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-        }
-        .social-media a {
-            display: block;
-            width: 50px;
-            height: 50px;
-            background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'); /* Instagram 로고 */
-            background-size: cover;
-            border-radius: 50%;
-            text-indent: -9999px;
-        }
-        footer {
-            background: rgba(0, 0, 0, 0.7);
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIU | SMILE IDEA FOR YOU</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .content {
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      position: relative;
+      font-size: 0.95em;
+    }
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+    }
+    .insta-icon {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 1.5em;
+    }
+    .insta-icon a {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>SIU</h1>
+    <p>SMILE IDEA FOR YOU</p>
+  </header>
 
-    <header>
-        <h1>SIU - SMILE IDEA FOR YOU</h1>
-        <p>식품, 의약품, 화장품, 생활용품을 무역하는 회사</p>
-    </header>
+  <nav>
+    <a href="#about">회사 소개</a>
+    <a href="#products">제품 아카이빙</a>
+    <a href="#clients">주요 거래처</a>
+    <a href="#contact">연락처</a>
+  </nav>
 
-    <div class="language-select">
-        <button onclick="window.location.href='/ko'">한국어</button>
-        <button onclick="window.location.href='/en'">English</button>
-        <button onclick="window.location.href='/ja'">日本語</button>
+  <div class="content">
+    <div id="about" class="section">
+      <h2>회사 소개</h2>
+      <p>SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.</p>
     </div>
 
-    <section>
-        <h2>회사 소개</h2>
-        <p>SIU는 고객에게 웃음을 선사하는 혁신적인 아이디어를 제공하는 무역 회사입니다. 다양한 품목의 식품, 의약품, 화장품, 생활용품을 국내외에서 수입하고 수출하는 업무를 전문으로 하고 있습니다. SIU는 품질 높은 제품을 합리적인 가격에 제공하며, 고객 만족을 최우선으로 합니다.</p>
-    </section>
-
-    <section>
-        <h2>연락처</h2>
-        <div class="contact-info">
-            <span><strong>법인명</strong>: (주) SIU</span>
-            <span><strong>주소</strong>: 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)</span>
-            <span><strong>영문 주소</strong>: 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea</span>
-            <span><strong>전화번호</strong>: 02-446-0011</span>
-            <span><strong>팩스번호</strong>: 02-446-0018</span>
-            <span><strong>대표자 이름</strong>: 윤인자</span>
-            <span><strong>대표자 전화번호</strong>: 010-5660-3237</span>
-            <span><strong>이메일</strong>: yij1225@hotmail.com</span>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 SIU. All Rights Reserved.</p>
-    </footer>
-
-    <!-- Instagram Link -->
-    <div class="social-media">
-        <a href="https://www.instagram.com/siu.co.ltd/" target="_blank" title="Follow us on Instagram"></a>
+    <div id="products" class="section">
+      <h2>제품 아카이빙</h2>
+      <p>지금까지 SIU가 다뤄온 주요 품목들을 이곳에서 확인하실 수 있습니다. (세부 리스트는 추후 업데이트 예정)</p>
     </div>
 
+    <div id="clients" class="section">
+      <h2>주요 거래처</h2>
+      <p>국내외 다양한 파트너들과의 협력을 통해 신뢰와 성장을 이어가고 있습니다. (리스트 업데이트 예정)</p>
+    </div>
+
+    <div id="contact" class="section">
+      <h2> </h2>
+      <p>
+        법인명: (주) SIU － 대표자: 윤인자 － 대표자 연락처: 010-5660-3237<br>
+        주소: 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)<br>
+        영문주소: 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea<br>
+        전화: 02-446-0011 － 팩스: 02-446-0018 － 이메일: yij1225@hotmail.com
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="language-switch">
+      <button onclick="switchLanguage('ko')">한국어</button>
+      <button onclick="switchLanguage('en')">English</button>
+      <button onclick="switchLanguage('ja')">日本語</button>
+    </div>
+    <div class="insta-icon">
+      <a href="https://www.instagram.com/siu.co.ltd/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    const content = {
+      ko: {
+        about: "SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.",
+        products: "지금까지 SIU가 다뤄온 주요 품목들을 이곳에서 확인하실 수 있습니다. (세부 리스트는 추후 업데이트 예정)",
+        clients: "국내외 다양한 파트너들과의 협력을 통해 신뢰와 성장을 이어가고 있습니다. (리스트 업데이트 예정)",
+      },
+      en: {
+        about: "SIU is a trading company specializing in food, pharmaceuticals, cosmetics, and daily necessities. We discover products that meet global needs and deliver sustainable value based on quality and trust.",
+        products: "You can check out the key products SIU has dealt with here. (Detailed list coming soon)",
+        clients: "We are building trust and growth with a wide range of domestic and international partners. (List to be updated)"
+      },
+      ja: {
+        about: "SIUは、食品、医薬品、化粧品、生活用品を専門とする貿易会社です。グローバル市場でお客様のニーズに応える製品を発掘し、高い品質と信頼を基に持続的な価値を提供しています。",
+        products: "これまでSIUが取り扱ってきた主な商品をご覧いただけます。（詳細リストは後日更新予定）",
+        clients: "国内外の多様なパートナーと協力し、信頼と成長を築いています。（リストは後日更新）"
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.querySelector('#about p').innerText = content[lang].about;
+      document.querySelector('#products p').innerText = content[lang].products;
+      document.querySelector('#clients p').innerText = content[lang].clients;
+    }
+  </script>
 </body>
 </html>
