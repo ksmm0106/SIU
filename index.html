@@ -13,70 +13,70 @@
       background-size: cover;
       color: #fff;
     }
-
     header {
       background-color: rgba(0, 0, 0, 0.7);
       padding: 20px;
       text-align: center;
     }
-
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
-
     header p {
       margin: 5px 0 0;
       font-size: 1.2em;
     }
-
     nav {
       background-color: rgba(0, 0, 0, 0.6);
       display: flex;
       justify-content: center;
       padding: 10px;
     }
-
     nav a {
       color: white;
       text-decoration: none;
       margin: 0 15px;
       font-weight: bold;
-      transition: color 0.3s;
     }
-
-    nav a:hover {
-      color: #ffcc00;
-    }
-
     .content {
       padding: 40px;
       background-color: rgba(0, 0, 0, 0.5);
     }
-
     .section {
       margin-bottom: 40px;
     }
-
     .section h2 {
       margin-top: 0;
     }
-
     footer {
       background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
-      text-align: center;
       position: relative;
       font-size: 0.95em;
     }
-
+    .language-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language-switch button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+      background-color: #444;
+      color: #fff;
+    }
+    .language-switch button.active {
+      background-color: #00aaff;
+      font-weight: bold;
+    }
     .insta-icon {
       position: absolute;
       bottom: 20px;
       right: 20px;
       font-size: 1.5em;
     }
-
     .insta-icon a {
       color: #fff;
     }
@@ -94,13 +94,11 @@
   </nav>
 
   <div class="content">
-    <!-- 회사 소개 -->
     <div id="about" class="section">
       <h2>회사 소개</h2>
       <p>SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.</p>
     </div>
 
-    <!-- 연락처 -->
     <div id="contact" class="section">
       <h2>연락처</h2>
       <p>
@@ -108,16 +106,44 @@
         주소: 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)<br>
         영문주소: 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea<br>
         전화: 02-446-0011 － 팩스: 02-446-0018 － 이메일: yij1225@hotmail.com<br>
-        사업자등록번호: 4568700295
       </p>
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2025 SIU. All Rights Reserved.</p>
+    <div class="language-switch">
+      <button id="btn-ko" onclick="switchLanguage('ko')">한국어</button>
+      <button id="btn-en" onclick="switchLanguage('en')">English</button>
+      <button id="btn-ja" onclick="switchLanguage('ja')">日本語</button>
+    </div>
     <div class="insta-icon">
       <a href="https://www.instagram.com/siu.co.ltd/" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </footer>
+
+  <script>
+    const content = {
+      ko: {
+        about: "SIU는 식품, 의약품, 화장품, 생활용품을 전문적으로 무역하는 회사입니다. 글로벌 시장에서 고객의 니즈에 맞는 제품을 발굴하고, 높은 품질과 신뢰를 바탕으로 지속적인 가치를 창출합니다.",
+        contact: "연락처"
+      },
+      en: {
+        about: "SIU is a trading company specializing in food, pharmaceuticals, cosmetics, and daily necessities. We discover products that meet global needs and deliver sustainable value based on quality and trust.",
+        contact: "Contact"
+      },
+      ja: {
+        about: "SIUは、食品、医薬品、化粧品、生活用品を専門とする貿易会社です。グローバル市場でお客様のニーズに応える製品を発掘し、高い品質と信頼を基に持続的な価値を提供しています。",
+        contact: "連絡先"
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.querySelector('#about p').innerText = content[lang].about;
+      document.querySelector('#contact h2').innerText = content[lang].contact;
+
+      document.querySelectorAll('.language-switch button').forEach(btn => btn.classList.remove('active'));
+      document.getElementById(`btn-${lang}`).classList.add('active');
+    }
+  </script>
 </body>
 </html>
