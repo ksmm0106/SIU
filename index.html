@@ -1,90 +1,105 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIU - SMILE IDEA FOR YOU</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #ffffff;
+        color: #333;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>(주) SIU</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
-    }
+      header {
+        background-color: #0047ab; /* Cobalt Blue */
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+      }
 
-    header {
-      background-color: #0047AB; /* 코발트 블루 */
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+      main {
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: auto;
+      }
 
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
+      section {
+        margin-bottom: 30px;
+      }
 
-    .info {
-      margin-bottom: 20px;
-    }
+      h2 {
+        color: #0047ab;
+        border-bottom: 2px solid #0047ab;
+        padding-bottom: 5px;
+      }
 
-    footer {
-      background-color: #f1f1f1;
-      color: #333;
-      text-align: right;
-      padding: 10px 20px;
-      position: relative;
-    }
+      .contact-info p {
+        margin: 6px 0;
+        line-height: 1.6;
+      }
 
-    .instagram {
-      position: absolute;
-      right: 20px;
-      top: 10px;
-    }
+      .instagram-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+      }
 
-    .instagram img {
-      width: 24px;
-      height: 24px;
-    }
-  </style>
-</head>
+      .instagram-icon img {
+        width: 100%;
+        height: 100%;
+      }
 
-<body>
-  <header>
-    <h1>(주) SIU</h1>
-  </header>
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 20px;
+        color: #aaa;
+      }
+    </style>
+  </head>
 
-  <main>
-    <section class="info">
-      <h2>회사 정보</h2>
-      <p><strong>법인명:</strong> (주) SIU</p>
-      <p><strong>주소:</strong> 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)</p>
-      <p><strong>영문 주소:</strong> 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea</p>
-      <p><strong>전화번호:</strong> 02-446-0011</p>
-      <p><strong>팩스번호:</strong> 02-446-0018</p>
-      <p><strong>대표자 이름:</strong> 윤인자</p>
-      <p><strong>대표자 전화번호:</strong> 010-5660-3237</p>
-      <p><strong>이메일:</strong> yij1225@hotmail.com</p>
-    </section>
-  </main>
+  <body>
+    <header>
+      <h1>(주) SIU</h1>
+      <p>SMILE IDEA FOR YOU</p>
+    </header>
 
-  <footer>
-    <div class="instagram">
-      <a href="https://www.instagram.com/siu.co.ltd/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
-      </a>
-    </div>
-    © 2025 SIU Co., Ltd. All rights reserved.
-  </footer>
-</body>
+    <main>
+      <section class="contact-info">
+        <h2>회사 정보</h2>
+        <p><strong>법인명:</strong> (주) SIU</p>
+        <p><strong>주소:</strong> 05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)</p>
+        <p><strong>영문 주소:</strong> 3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea</p>
+        <p><strong>전화번호:</strong> 02-446-0011</p>
+        <p><strong>팩스번호:</strong> 02-446-0018</p>
+        <p><strong>대표자 이름:</strong> 윤인자</p>
+        <p><strong>대표자 연락처:</strong> 010-5660-3237</p>
+        <p><strong>이메일:</strong> yij1225@hotmail.com</p>
+      </section>
+    </main>
 
+    <!-- Instagram Icon -->
+    <a
+      href="https://www.instagram.com/siu.co.ltd/"
+      class="instagram-icon"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+        alt="Instagram"
+      />
+    </a>
+
+    <footer>© 2025 SIU. All rights reserved.</footer>
+  </body>
 </html>
-
-
