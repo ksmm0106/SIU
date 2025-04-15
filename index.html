@@ -41,7 +41,10 @@
     }
 
     .language-buttons {
-      margin-bottom: 20px;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
     }
 
     .language-buttons button {
@@ -52,6 +55,7 @@
       margin: 0 5px;
       cursor: pointer;
       font-size: 1rem;
+      border-radius: 5px;
     }
 
     .instagram-fixed {
@@ -157,17 +161,17 @@
 
       document.getElementById("company-name").innerText = texts[language].companyName;
       document.getElementById("content-1").innerHTML = texts[language].content1;
-      document.getElementById("content-2").innerHTML = texts[language].content2;
-      document.getElementById("content-3").innerHTML = texts[language].content3;
-      document.getElementById("content-4").innerHTML = texts[language].content4;
-      document.getElementById("content-5").innerHTML = texts[language].content5;
-      document.getElementById("content-6").innerHTML = texts[language].content6;
-      document.getElementById("footer-1").innerHTML = texts[language].footer1;
-      document.getElementById("footer-2").innerHTML = texts[language].footer2;
-      document.getElementById("footer-3").innerHTML = texts[language].footer3;
-      document.getElementById("footer-4").innerHTML = texts[language].footer4;
-      document.getElementById("footer-5").innerHTML = texts[language].footer5;
-      document.getElementById("footer-6").innerHTML = texts[language].footer6;
+      document.getElementById("content-2").innerText = texts[language].content2;
+      document.getElementById("content-3").innerText = texts[language].content3;
+      document.getElementById("content-4").innerText = texts[language].content4;
+      document.getElementById("content-5").innerText = texts[language].content5;
+      document.getElementById("content-6").innerText = texts[language].content6;
+      document.getElementById("footer-1").innerText = texts[language].footer1;
+      document.getElementById("footer-2").innerText = texts[language].footer2;
+      document.getElementById("footer-3").innerText = texts[language].footer3;
+      document.getElementById("footer-4").innerText = texts[language].footer4;
+      document.getElementById("footer-5").innerText = texts[language].footer5;
+      document.getElementById("footer-6").innerText = texts[language].footer6;
     }
   </script>
 </body>
