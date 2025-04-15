@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff; /* 배경 흰색 */
-      color: #0047ab; /* 텍스트 코발트 블루 */
+      background-color: #ffffff;
+      color: #0047ab;
     }
 
     .main-section {
@@ -33,7 +33,7 @@
     }
 
     .footer {
-      background-color: #f0f0f0; /* 밝은 회색 */
+      background-color: #f0f0f0;
       color: #0047ab;
       padding: 20px;
       text-align: center;
@@ -45,17 +45,16 @@
       top: 20px;
       right: 20px;
       z-index: 1000;
+      display: flex;
+      gap: 8px;
     }
 
-    .language-buttons button {
-      background-color: #0047ab;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 5px;
+    .language-buttons img {
+      width: 36px;
+      height: 24px;
       cursor: pointer;
-      font-size: 1rem;
-      border-radius: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
     }
 
     .instagram-fixed {
@@ -81,9 +80,9 @@
 <body>
   <div class="main-section">
     <div class="language-buttons">
-      <button onclick="changeLanguage('ko')">한국어</button>
-      <button onclick="changeLanguage('en')">English</button>
-      <button onclick="changeLanguage('jp')">日本語</button>
+      <img src="https://flagcdn.com/w40/kr.png" alt="한국어" onclick="changeLanguage('ko')">
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="changeLanguage('en')">
+      <img src="https://flagcdn.com/w40/jp.png" alt="日本語" onclick="changeLanguage('jp')">
     </div>
     <h1 id="company-name">SIU.co.,ltd</h1>
     <div class="content" id="content">
