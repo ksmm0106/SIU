@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIU</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #0047ab;
+    }
+
+    .main-section {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .main-section h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .content {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+
+    .footer {
+      background-color: #f0f0f0;
+      color: #0047ab;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .language-buttons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 8px;
+    }
+
+    .language-buttons img {
+      width: 36px;
+      height: 24px;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .instagram-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0047ab;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .instagram-fixed img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-section">
+    <div class="language-buttons">
+      <img src="https://flagcdn.com/w40/kr.png" alt="한국어" onclick="changeLanguage('ko')">
+      <img src="https://flagcdn.com/w40/gb.png" alt="English" onclick="changeLanguage('en')">
+      <img src="https://flagcdn.com/w40/jp.png" alt="日本語" onclick="changeLanguage('jp')">
+    </div>
+    <h1 id="company-name">SIU CO.,LTD.</h1>
+    <div class="content" id="content">
+      <p id="content-1">🌐 <strong>[SIU] | 전문무역상사</strong></p>
+      <p id="content-2">🚀 한국과 해외의 우수한 제품을 글로벌 시장에!</p>
+      <p id="content-3">🌎 KR ↔ JP &Worldwide | B2B & B2C</p>
+      <p id="content-4">📦 식품 | 의약품 | 화장품 | 잡화</p>
+      <p id="content-5">📩 B2B & B2C 문의는 DM</p>
+      <p id="content-6">💡 Smile Idea For U</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p id="footer-1"><strong>(주) 에스아이유</strong></p>
+    <p id="footer-2">05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)</p>
+    <p id="footer-3">3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea</p>
+    <p id="footer-4">전화번호: 02-446-0011 | 팩스번호: 02-446-0018</p>
+    <p id="footer-5">대표자: 윤인자 | 대표자 연락처: 010-5660-3237</p>
+    <p id="footer-6">이메일: yij1225@hotmail.com</p>
+  </div>
+
+  <a class="instagram-fixed" href="https://www.instagram.com/siu.co.ltd/" target="_blank" aria-label="Instagram">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" />
+  </a>
+
+  <script>
+    function changeLanguage(language) {
+      const texts = {
+        ko: {
+          companyName: "SIU CO.,LTD.",
+          content1: "🌐 <strong>[SIU] | 전문무역상사</strong>",
+          content2: "🚀 한국과 해외의 우수한 제품을 글로벌 시장에!",
+          content3: "🌎 KR ↔ JP &Worldwide | B2B & B2C",
+          content4: "📦 식품 | 의약품 | 화장품 | 잡화",
+          content5: "📩 B2B & B2C 문의는 DM",
+          content6: "💡 Smile Idea For U",
+          footer1: "(주) 에스아이유",
+          footer2: "05227 대한민국 서울시 강동구 동남로81길 94, 3층(고덕동)",
+          footer3: "3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea",
+          footer4: "전화번호: 02-446-0011 | 팩스번호: 02-446-0018",
+          footer5: "대표자: 윤인자 | 대표자 연락처: 010-5660-3237",
+          footer6: "이메일: yij1225@hotmail.com"
+        },
+        en: {
+          companyName: "SIU CO.,LTD.",
+          content1: "🌐 <strong>[SIU] | Professional Trading Company</strong>",
+          content2: "🚀 Bringing excellent products from Korea and overseas to the global market!",
+          content3: "🌎 KR ↔ JP &Worldwide | B2B & B2C",
+          content4: "📦 Food | Pharmaceuticals | Cosmetics | Miscellaneous",
+          content5: "📩 DM for B2B & B2C inquiries",
+          content6: "💡 Smile Idea For U",
+          footer1: "(주) SIU",
+          footer2: "05227 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea",
+          footer3: "3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea",
+          footer4: "Phone: 02-446-0011 | Fax: 02-446-0018",
+          footer5: "CEO: Yoon Inja | CEO Contact: 010-5660-3237",
+          footer6: "Email: yij1225@hotmail.com"
+        },
+        jp: {
+          companyName: "SIU CO.,LTD.",
+          content1: "🌐 <strong>[SIU] | 専門貿易会社</strong>",
+          content2: "🚀 韓国と海外の優れた製品をグローバル市場へ！",
+          content3: "🌎 KR ↔ JP &Worldwide | B2B & B2C",
+          content4: "📦 食品 | 医薬品 | 化粧品 | その他",
+          content5: "📩 B2B & B2Cのお問い合わせはDM",
+          content6: "💡 Smile Idea For U",
+          footer1: "(株) エスアイユ",
+          footer2: "05227 韓国、ソウル市、江東区、東南路81ギル94、3階",
+          footer3: "3F, 94, Dongnam-ro 81-gil, Gangdong-gu, Seoul, Republic of Korea",
+          footer4: "電話番号: 02-446-0011 | FAX番号: 02-446-0018",
+          footer5: "代表者: ユン・インジャ | 代表者連絡先: 010-5660-3237",
+          footer6: "メール: yij1225@hotmail.com"
+        }
+      };
+
+      document.getElementById("company-name").innerText = texts[language].companyName;
+      document.getElementById("content-1").innerHTML = texts[language].content1;
+      document.getElementById("content-2").innerText = texts[language].content2;
+      document.getElementById("content-3").innerText = texts[language].content3;
+      document.getElementById("content-4").innerText = texts[language].content4;
+      document.getElementById("content-5").innerText = texts[language].content5;
+      document.getElementById("content-6").innerText = texts[language].content6;
+      document.getElementById("footer-1").innerText = texts[language].footer1;
+      document.getElementById("footer-2").innerText = texts[language].footer2;
+      document.getElementById("footer-3").innerText = texts[language].footer3;
+      document.getElementById("footer-4").innerText = texts[language].footer4;
+      document.getElementById("footer-5").innerText = texts[language].footer5;
+      document.getElementById("footer-6").innerText = texts[language].footer6;
+    }
+  </script>
+</body>
+</html>
